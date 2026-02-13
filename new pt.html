@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sadia Islam Usha | Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#021a14;
+            color:white;
+        }
+
+        section{
+            padding:70px 20px;
+            text-align:center;
+        }
+
+        h1{ font-size:48px; }
+        h2{ font-size:34px; margin-bottom:25px; color:#00ffae; }
+
+        /* HERO */
+        .hero{
+            height:100vh;
+            background:url("images/main.png") center/cover no-repeat;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            position:relative;
+        }
+
+        .overlay{
+            position:absolute;
+            width:100%;
+            height:100%;
+            background:rgba(0,0,0,0.6);
+        }
+
+        .hero-content{
+            position:relative;
+            z-index:2;
+        }
+
+        /* ABOUT */
+        .about{
+            background:url("images/about.png") center/cover no-repeat;
+            position:relative;
+            color:white;
+        }
+
+        .about .overlay{
+            background:rgba(0,0,0,0.7);
+        }
+
+        .content{
+            position:relative;
+            z-index:2;
+            max-width:800px;
+            margin:auto;
+        }
+
+        /* DARK SECTION */
+        .dark{
+            background:#03261e;
+        }
+
+        .box{
+            margin:15px 0;
+            font-size:18px;
+        }
+
+        /* FOOTER */
+        footer{
+            background:#01110d;
+            padding:20px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <h1>Sadia Islam Usha</h1>
+        <p>CSE Student | Competitive Programmer</p>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+    <div class="overlay"></div>
+    <div class="content">
+        <h2>About Me</h2>
+        <p>
+            Passionate CSE undergraduate interested in programming,
+            database systems and problem solving.
+        </p>
+    </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="dark">
+    <h2>Education</h2>
+    <div class="box">School: Engineering University School</div>
+    <div class="box">College: Dhaka City College</div>
+    <div class="box">University: University of Asia Pacific</div>
+</section>
+
+<!-- PROJECTS -->
+<section class="dark">
+    <h2>Projects</h2>
+    <div class="box">
+        <strong>Database Project – Traffic Management System</strong><br>
+        Simple database project for traffic management system.
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="dark">
+    <h2>Contact</h2>
+    <div class="box">Email: siausha496@gmail.com</div>
+</section>
+
+<footer>
+    © 2026 Sadia Islam Usha | All Rights Reserved
+</footer>
+
+</body>
+</html>
+
+
