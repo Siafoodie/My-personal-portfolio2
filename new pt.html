@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
     <style>
@@ -12,7 +13,7 @@
             margin:0;
             padding:0;
             box-sizing:border-box;
-            font-family:Arial, sans-serif;
+            font-family:'Segoe UI', sans-serif;
         }
 
         body{
@@ -21,56 +22,52 @@
         }
 
         section{
-            padding:70px 20px;
-            text-align:center;
-        }
-
-        h1{ font-size:48px; }
-        h2{ font-size:34px; margin-bottom:25px; color:#00ffae; }
-
-        /* HERO */
-        .hero{
-            height:100vh;
-            background:url("images/main.png") center/cover no-repeat;
+            min-height:100vh;
             display:flex;
             align-items:center;
             justify-content:center;
+            text-align:center;
+            padding:40px;
             position:relative;
         }
 
+        h1{ font-size:48px; margin-bottom:15px; }
+        h2{ font-size:36px; margin-bottom:25px; color:#00ffae; }
+
+        p{ font-size:18px; line-height:1.6; }
+
+        /* OVERLAY */
         .overlay{
             position:absolute;
+            top:0;
+            left:0;
             width:100%;
             height:100%;
-            background:rgba(0,0,0,0.6);
-        }
-
-        .hero-content{
-            position:relative;
-            z-index:2;
-        }
-
-        /* ABOUT */
-        .about{
-            background:url("images/about.png") center/cover no-repeat;
-            position:relative;
-            color:white;
-        }
-
-        .about .overlay{
-            background:rgba(0,0,0,0.7);
+            background:rgba(0,0,0,0.65);
         }
 
         .content{
             position:relative;
             z-index:2;
             max-width:800px;
-            margin:auto;
         }
 
-        /* DARK SECTION */
+        /* HERO */
+        .hero{
+            background:url("images/main.png") center/cover no-repeat;
+        }
+
+        /* ABOUT */
+        .about{
+            background:url("images/about.png") center/cover no-repeat;
+        }
+
+        /* DARK SECTIONS */
         .dark{
-            background:#03261e;
+            background:#021914;
+            min-height:auto;
+            padding:80px 20px;
+            display:block;
         }
 
         .box{
@@ -78,12 +75,65 @@
             font-size:18px;
         }
 
-        /* FOOTER */
-        footer{
-            background:#01110d;
-            padding:20px;
+        /* SKILLS */
+        .skill{
+            margin:15px 0;
+            max-width:500px;
+            margin-left:auto;
+            margin-right:auto;
         }
 
+        .bar{
+            background:#ccc;
+            border-radius:20px;
+            overflow:hidden;
+        }
+
+        .level{
+            height:10px;
+            background:#0aab78;
+        }
+
+        /* BUTTON */
+        .btn{
+            display:inline-block;
+            margin:10px;
+            padding:12px 25px;
+            background:#0aab78;
+            color:black;
+            text-decoration:none;
+            font-weight:bold;
+            border-radius:30px;
+            transition:0.3s;
+        }
+
+        .btn:hover{
+            background:white;
+            transform:scale(1.05);
+        }
+
+        /* SOCIAL ICONS */
+        .social-icons{
+            margin-top:20px;
+        }
+
+        .social-icons a{
+            color:#0aab78;
+            font-size:35px;
+            margin:0 20px;
+            transition:0.3s ease;
+        }
+
+        .social-icons a:hover{
+            color:white;
+            transform:scale(1.3);
+        }
+
+        footer{
+            background:#01110d;
+            text-align:center;
+            padding:20px;
+        }
     </style>
 </head>
 
@@ -92,9 +142,17 @@
 <!-- HERO -->
 <section class="hero">
     <div class="overlay"></div>
-    <div class="hero-content">
+    <div class="content">
         <h1>Sadia Islam Usha</h1>
-        <p>CSE Student | Competitive Programmer</p>
+        <p>CSE Student | Competitive Programmer | Software Enthusiast</p>
+
+        <a href="https://github.com/Siafoodie" target="_blank" class="btn">
+            <i class="fab fa-github"></i> GitHub
+        </a>
+
+        <a href="CV.pdf" download class="btn">
+            <i class="fas fa-download"></i> Download CV
+        </a>
     </div>
 </section>
 
@@ -104,9 +162,45 @@
     <div class="content">
         <h2>About Me</h2>
         <p>
-            Passionate CSE undergraduate interested in programming,
-            database systems and problem solving.
+            I am currently pursuing my BSc in Computer Science & Engineering.
+            I love solving algorithmic problems and building efficient systems.
+            Passionate about C, C++, Java and database management.
         </p>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section class="dark">
+    <h2>Skills</h2>
+
+    <div class="skill">
+        <p>C Programming</p>
+        <div class="bar"><div class="level" style="width:90%"></div></div>
+    </div>
+
+    <div class="skill">
+        <p>C++</p>
+        <div class="bar"><div class="level" style="width:85%"></div></div>
+    </div>
+
+    <div class="skill">
+        <p>Java</p>
+        <div class="bar"><div class="level" style="width:80%"></div></div>
+    </div>
+
+    <div class="skill">
+        <p>SQL</p>
+        <div class="bar"><div class="level" style="width:75%"></div></div>
+    </div>
+
+    <div class="skill">
+        <p>Git</p>
+        <div class="bar"><div class="level" style="width:70%"></div></div>
+    </div>
+
+    <div class="skill">
+        <p>VS Code</p>
+        <div class="bar"><div class="level" style="width:85%"></div></div>
     </div>
 </section>
 
@@ -130,7 +224,23 @@
 <!-- CONTACT -->
 <section class="dark">
     <h2>Contact</h2>
-    <div class="box">Email: siausha496@gmail.com</div>
+
+    <div class="social-icons">
+        <!-- Gmail -->
+        <a href="mailto:yourmail@gmail.com">
+            <i class="fas fa-envelope"></i>
+        </a>
+
+        <!-- Facebook -->
+        <a href="https://facebook.com/yourusername" target="_blank">
+            <i class="fab fa-facebook"></i>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://instagram.com/yourusername" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
 </section>
 
 <footer>
